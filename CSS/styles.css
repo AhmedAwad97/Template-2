@@ -1,5 +1,8 @@
 :root {
   --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --section-padding: 10rem;
+  --paragraph-color: #777;
 }
 
 * {
@@ -15,7 +18,6 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: black;
 }
 
 ul {
@@ -38,6 +40,115 @@ ul {
     width: 1170px;
   }
 }
+
+/*End Landing*/
+
+/*Start Components*/
+/*Heading*/
+.main-heading .infos {
+  text-align: center;
+}
+
+.main-heading h2 {
+  font-size: 4rem;
+  font-weight: normal;
+  margin-bottom: 7rem;
+  text-transform: uppercase;
+  position: relative;
+}
+.main-heading .infos h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3rem;
+  width: 12rem;
+  height: 1px;
+  background-color: #777;
+  transform: translateX(-50%);
+}
+.main-heading .infos h2::after {
+  content: "";
+  position: absolute;
+  bottom: -3.5rem;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #777;
+  transform: translateX(-50%);
+}
+
+.main-heading .infos p {
+  width: 55rem;
+  margin: 0 auto 10rem;
+  max-width: 100%;
+  line-height: 2;
+  color: var(--paragraph-color);
+}
+/*End Heading*/
+
+/*Start Media*/
+.media {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  text-align: center;
+}
+
+.media .image i {
+  font-size: 2.2rem;
+}
+
+.media .media-desc h3 {
+  font-size: 2.2rem;
+  color: var(--main-color);
+  margin-bottom: 3rem;
+}
+
+.media .media-desc p {
+  font-size: 1.4rem;
+  line-height: 2;
+  color: var(--paragraph-color);
+}
+
+@media screen and (min-width: 768px) {
+  .media {
+    grid-template-columns: 1fr 5fr;
+  }
+
+  .media .image i {
+    font-size: 3.6rem;
+  }
+
+  .media .media-desc h3 {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    margin-bottom: 3rem;
+  }
+
+  .media .media-desc p {
+    font-size: 1.6rem;
+    line-height: 2;
+    color: var(--paragraph-color);
+  }
+}
+
+/*End Media*/
+
+/*Start gird-2x2*/
+@media screen and (min-width: 768px) {
+  .grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3rem 5rem;
+  }
+}
+/*Start gird-2x2*/
+
+/*End Components*/
 
 /* Start Header */
 header {
@@ -103,7 +214,7 @@ header nav ul {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: rgb(0, 0, 0/ 50%);
+    background-color: rgb(0 0 0/ 50%);
   }
 
   header nav .toggle-menu:hover + ul li a {
@@ -146,3 +257,112 @@ header nav .form i {
 }
 
 /* End Header */
+
+/*Start Landing*/
+.landing {
+  min-height: 100vh;
+  background-image: url(../img/Owl.jpg);
+  background-size: cover;
+  background-color: #1f2021;
+  position: relative;
+}
+
+.landing .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+.landing .text {
+  position: absolute;
+  color: white;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--transparent-color);
+  padding: 5rem;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end; /*nothing will change before we reduce the width of the content to not take 100% of width*/
+}
+
+.landing .text .content {
+  max-width: 500px; /* will make the property justify content: flex end in the parent div works */
+}
+
+@media screen and (max-width: 767px) {
+  .landing .text {
+    width: 100%;
+  }
+  .landing .text .content {
+    max-width: 100%;
+  }
+}
+
+.landing .text .content h2 {
+  font-size: 3.2rem;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+.landing .text .content p {
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.landing .change-background {
+  position: absolute;
+  color: #ddd;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 767px) {
+  .landing .change-background {
+    display: none;
+  }
+}
+
+.landing .fa-angle-left {
+  left: 3rem;
+}
+
+.landing .fa-angle-right {
+  right: 3rem;
+}
+
+.landing .bullets {
+  position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.landing .bullets li {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.landing .bullets li.active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+/* End Landing */
+
+/*Start Services*/
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.main-heading .services-content {
+  padding: 2rem;
+}
+/*Start Services*/
