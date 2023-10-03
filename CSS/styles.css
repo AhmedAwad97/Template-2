@@ -366,3 +366,92 @@ header nav .form i {
   padding: 2rem;
 }
 /*Start Services*/
+
+/*Start Design */
+.design-section {
+  background-image: url(../img/black\ background.jpg);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  height: 60rem;
+  padding-bottom: var(--section-padding);
+  padding-top: var(--section-padding);
+  position: relative;
+}
+
+.design-section::before {
+  content: "";
+  background-color: rgb(0 0 0 / 60%);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.design-section .image {
+  position: relative;
+}
+
+.design-section .image img {
+  bottom: -10rem;
+  height: 45rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.design-section .text {
+  background-color: var(--transparent-color);
+  color: white;
+  padding: 5rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  z-index: 2;
+}
+
+.design-section .text h2 {
+  font-size: 3.2rem;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.design-section .text ul {
+  padding: 1.5rem 0;
+}
+.design-section .text ul li {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.design-section .text ul li::before {
+  content: "\e163";
+  font-family: "Font Awesome 5 Free"; /*this is the font family to make the fone awesome icon appear */
+  font-weight: 900;
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .design-section .image img {
+    display: none;
+  }
+
+  .design-section .text {
+    width: 100%;
+  }
+
+  .design-section .text h2 {
+    font-size: 2rem;
+  }
+
+  .design-section .text ul li {
+    font-size: 1.2rem;
+  }
+}
+/*End Design */
