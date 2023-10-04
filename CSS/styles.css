@@ -623,3 +623,71 @@ header nav .form i {
 }
 
 /*End About Section*/
+
+/*Start Statistics section*/
+.statistics-section {
+  background-image: url(../img/statistics-background.jpg);
+  background-size: cover;
+  padding-bottom: var(--section-padding);
+  padding-top: var(--section-padding);
+  position: relative;
+  text-align: center;
+}
+
+.statistics-section::before {
+  content: "";
+  background-color: rgb(0 0 0 / 60%);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.statistics-section .container {
+  display: grid;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .statistics-section .container {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 768px) {
+  .statistics-section .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .statistics-section .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.statistics-section .container .box {
+  color: white;
+  padding: 5rem;
+  background: var(--transparent-color);
+}
+
+.statistics-section .container .box i {
+  align-items: center;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+  margin: 0 auto 3rem;
+  width: 4rem;
+}
+.statistics-section .container .box .number {
+  font-size: 4.8rem;
+  font-weight: bold;
+  margin: 0 0 2rem;
+}
+.statistics-section .container .box p {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+/*End Statistics section*/
