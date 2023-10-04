@@ -605,3 +605,21 @@ header nav .form i {
   border: none;
 }
 /*End Video Gallery */
+
+/*Start About Section*/
+.about {
+  padding-top: var(--section-padding);
+  overflow: hidden;
+}
+
+.about img {
+  position: relative;
+  height: 30rem;
+  max-width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -7rem;
+  margin-top: -7rem;
+}
+
+/*End About Section*/
