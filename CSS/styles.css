@@ -35,6 +35,13 @@ ul {
     width: 750px;
   }
 }
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -146,7 +153,18 @@ ul {
     gap: 3rem 5rem;
   }
 }
-/*Start gird-2x2*/
+/*End gird-2x2*/
+
+/*Start gird-1x2*/
+@media screen and (min-width: 768px) {
+  .grid-1x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 5rem;
+  }
+}
+/*End gird-1x2*/
 
 /*End Components*/
 
@@ -371,9 +389,6 @@ header nav .form i {
 .design-section {
   background-image: url(../img/black\ background.jpg);
   background-size: cover;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
   height: 60rem;
   padding-bottom: var(--section-padding);
   padding-top: var(--section-padding);
@@ -645,6 +660,14 @@ header nav .form i {
 }
 
 .statistics-section .container {
+  position: relative; /*to be above overlay*/
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*
+.statistics-section .container {
   display: grid;
   position: relative;
 }
@@ -664,11 +687,28 @@ header nav .form i {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
+*/
 .statistics-section .container .box {
   color: white;
   padding: 5rem;
   background: var(--transparent-color);
+}
+
+@media screen and (max-width: 767px) {
+  .statistics-section .container .box {
+    flex-basis: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .statistics-section .container .box {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .statistics-section .container .box {
+    flex-basis: calc(25% - 10rem);
+  }
 }
 
 .statistics-section .container .box i {
@@ -691,3 +731,137 @@ header nav .form i {
   text-transform: capitalize;
 }
 /*End Statistics section*/
+
+/*Start Testimonial*/
+.testimonials-section {
+  padding-bottom: var(--section-padding);
+  padding-top: var(--section-padding);
+}
+
+.testimonials-section .testimonial-content {
+  text-align: center;
+  position: relative;
+}
+
+.testimonials-section .testimonial-content h3,
+.testimonials-section .skills-content h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+.testimonials-section .testimonial-content p,
+.testimonials-section .skills-content p {
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.testimonials-section .testimonial-content .media .image img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.testimonials-section .testimonial-content .media p {
+  border-bottom: 1px solid #777;
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+.testimonials-section .testimonial-content .media p::before {
+  content: "Ahmed Awad";
+  position: absolute;
+  color: #777;
+  bottom: 0;
+  right: 1rem;
+}
+
+.testimonial-content .bullets {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.testimonial-content .bullets li {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #777;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.testimonial-content .bullets li.active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.testimonials-section .skills-content {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials-section .skills-content {
+    margin-top: 0;
+  }
+}
+
+.testimonials-section .skills-content .skills-progress {
+  text-align: left;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.testimonials-section .skills-content .skills-progress h4 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  text-align: left;
+}
+
+.testimonials-section .skills-content .skills-progress .progress-holder {
+  background-color: #ccc;
+  height: 30px;
+}
+
+.testimonials-section .skills-content .skills-progress .progress-holder span {
+  display: block;
+  background-color: var(--main-color);
+  height: 100%;
+  position: relative;
+}
+
+.testimonials-section
+  .skills-content
+  .skills-progress
+  .progress-holder
+  span:before {
+  content: attr(data-progress);
+  position: absolute;
+  background-color: black;
+  color: white;
+  width: 4rem;
+  text-align: center;
+  padding: 4px 0;
+  top: -3rem;
+  right: 0;
+  border-radius: 4px;
+}
+
+.testimonials-section
+  .skills-content
+  .skills-progress
+  .progress-holder
+  span::after {
+  content: "";
+  position: absolute;
+  right: 1.5rem;
+  top: -1rem;
+  border: 5px solid;
+  border-color: black transparent transparent;
+}
+/*End Testimonial*/
