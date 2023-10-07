@@ -865,3 +865,46 @@ header nav .form i {
   border-color: black transparent transparent;
 }
 /*End Testimonial*/
+
+/*Start Quote*/
+.quote {
+  background-image: url(../img/black\ background\ 2.jpg);
+  background-size: cover;
+  color: white;
+  padding-bottom: var(--section-padding);
+  padding-top: var(--section-padding);
+  text-align: center;
+}
+
+.quote q {
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 1.6;
+  position: relative;
+}
+
+.quote q::before,
+.quote q::after {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+
+.quote q::before {
+  content: \f10d;
+  position: absolute;
+  left: -3rem;
+  top: -1rem;
+}
+
+.quote q::after {
+  content: \f10e;
+  position: absolute;
+  right: -3rem;
+  bottom: -1rem;
+}
+
+.quote span {
+  display: block;
+  margin-top: 2rem;
+}
+/*End Quote*/
