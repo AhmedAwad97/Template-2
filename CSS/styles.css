@@ -166,6 +166,26 @@ ul {
 }
 /*End gird-1x2*/
 
+/*Start gird-1x4*/
+@media screen and (min-width: 768px) {
+  .grid-1x4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid-1x4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 5rem;
+  }
+}
+/*End gird-1x4*/
+
 /*End Components*/
 
 /* Start Header */
@@ -908,3 +928,107 @@ header nav .form i {
   margin-top: 2rem;
 }
 /*End Quote*/
+
+/*Start Pricing Section*/
+.pricing-section {
+  padding-bottom: var(--section-padding);
+  padding-top: var(--section-padding);
+  text-align: center;
+}
+
+.pricing-section .plans {
+  padding: 1rem;
+}
+
+.pricing-section .plans .plan-card {
+  background-color: #fcfcfc;
+}
+
+.pricing-section .plans .plan-card .head {
+  padding: 4rem 2rem;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+.pricing-section .plans .plan-card .head h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.pricing-section .plans .plan-card .head span {
+  font-size: 4.8rem;
+  font-weight: bold;
+}
+
+.pricing-section .plans .plan-card .head span::before {
+  content: "$";
+  font-size: 2rem;
+  position: relative;
+  top: -2rem;
+  left: -1rem;
+  font-weight: normal;
+}
+
+.pricing-section .plans .plan-card .head span::after {
+  content: "/MO";
+  position: relative;
+  font-size: 1rem;
+  right: -1rem;
+  font-weight: normal;
+}
+
+.pricing-section .plans .plan-card .body {
+  padding: 1rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.pricing-section .plans .plan-card .body ul li {
+  padding: 2rem;
+  position: relative;
+}
+
+.pricing-section .plans .plan-card .body ul li:not(:last-child):after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+  border-bottom: 1px solid var(--main-color);
+  margin-top: 1rem;
+}
+
+.pricing-section .plans .plan-card .foot button {
+  padding: 1rem 2rem;
+  border: 1px solid var(--main-color);
+  background-color: white;
+}
+
+.pricing-section .plans .plan-card .foot button a {
+  text-decoration: none;
+  color: black;
+}
+
+.pricing-section .container > p:last-of-type {
+  margin: 5rem auto 2rem;
+  font-size: 2rem;
+}
+
+.pricing-section .container > button {
+  padding: 1rem 2rem;
+  background-color: var(--main-color);
+  border: none;
+}
+
+.pricing-section .container > button a {
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 767px) {
+  .pricing-section .plans .plan-card .foot button {
+    margin-bottom: 5rem;
+  }
+}
+/*End Pricing Section*/
