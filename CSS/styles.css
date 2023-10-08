@@ -1032,3 +1032,68 @@ header nav .form i {
   }
 }
 /*End Pricing Section*/
+
+/*Start Subscription section*/
+.subscription-section {
+  padding-bottom: var(--section-padding);
+  padding-top: var(--section-padding);
+  background-image: url(../img/black\ background\ 2.jpg);
+  color: white;
+}
+
+.subscription-section form {
+  position: relative;
+  display: flex;
+}
+
+.subscription-section form i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  font-size: 1.8rem;
+}
+
+.subscription-section form input[type="email"] {
+  padding: 2rem 2rem 2rem 4rem;
+  width: 100%;
+  border: 2px solid white;
+  background-color: transparent;
+  text-transform: uppercase;
+  caret-color: var(--main-color);
+  color: white;
+}
+
+.subscription-section form::placeholder {
+  color: white;
+}
+
+.subscription-section form input[type="submit"] {
+  padding: 1rem 3rem;
+  position: absolute;
+  right: 0;
+  background-color: var(--main-color);
+  color: white;
+  border: 2px solid white;
+  border-left: none;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+.subscription-section form input[type="email"]:focus,
+.subscription-section form input[type="submit"]:focus {
+  outline: none;
+}
+
+.subscription-section p {
+  color: white;
+  line-height: 2;
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .subscription-section p {
+    margin-top: 0;
+  }
+}
+/*end Subscription section*/
