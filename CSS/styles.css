@@ -1008,11 +1008,18 @@ header nav .form i {
   background-color: white;
 }
 
+.pricing-section .plans .plan-card .foot button:hover {
+  background-color: var(--main-color);
+}
+
 .pricing-section .plans .plan-card .foot button a {
   text-decoration: none;
   color: black;
 }
 
+.pricing-section .plans .plan-card .foot button:hover a {
+  color: white;
+}
 .pricing-section .container > p:last-of-type {
   margin: 5rem auto 2rem;
   font-size: 2rem;
