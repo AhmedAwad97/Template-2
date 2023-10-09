@@ -1031,10 +1031,20 @@ header nav .form i {
   border: none;
 }
 
+.pricing-section .container > button:hover {
+  background-color: white;
+  border: 1px solid var(--main-color);
+}
+
 .pricing-section .container > button a {
   text-decoration: none;
   color: white;
 }
+
+.pricing-section .container > button:hover a {
+  color: black;
+}
+
 @media screen and (max-width: 767px) {
   .pricing-section .plans .plan-card .foot button {
     margin-bottom: 5rem;
