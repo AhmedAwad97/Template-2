@@ -409,7 +409,7 @@ header nav .form i {
 
 /*Start Design */
 .design-section {
-  background-image: url(../img/black\ background.jpg);
+  background-image: url(../img/black-background.jpg);
   background-size: cover;
   height: 60rem;
   padding-bottom: var(--section-padding);
@@ -890,7 +890,7 @@ header nav .form i {
 
 /*Start Quote*/
 .quote {
-  background-image: url(../img/black\ background\ 2.jpg);
+  background-image: url(../img/black-background2.jpg);
   background-size: cover;
   color: white;
   padding-bottom: var(--section-padding);
@@ -1039,7 +1039,7 @@ header nav .form i {
 .subscription-section {
   padding-bottom: var(--section-padding);
   padding-top: var(--section-padding);
-  background-image: url(../img/black\ background\ 2.jpg);
+  background-image: url(../img/black-background2.jpg);
   color: white;
 }
 
