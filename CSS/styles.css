@@ -144,10 +144,15 @@ ul {
 
 /*End Media*/
 
+/*Start Grid*/
+.grid {
+  display: grid;
+}
+/*End Grid*/
+
 /*Start gird-2x2*/
 @media screen and (min-width: 768px) {
   .grid-2x2 {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 3rem 5rem;
@@ -158,7 +163,6 @@ ul {
 /*Start gird-1x2*/
 @media screen and (min-width: 768px) {
   .grid-1x2 {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     gap: 5rem;
@@ -169,7 +173,6 @@ ul {
 /*Start gird-1x4*/
 @media screen and (min-width: 768px) {
   .grid-1x4 {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     gap: 5rem;
@@ -178,7 +181,6 @@ ul {
 
 @media screen and (min-width: 768px) {
   .grid-1x4 {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     gap: 5rem;
@@ -1048,20 +1050,20 @@ header nav .form i {
 
 .subscription-section form i {
   position: absolute;
+  font-size: 1.8rem;
+  left: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  left: 1rem;
-  font-size: 1.8rem;
 }
 
 .subscription-section form input[type="email"] {
-  padding: 2rem 2rem 2rem 4rem;
-  width: 100%;
-  border: 2px solid white;
   background-color: transparent;
-  text-transform: uppercase;
+  border: 2px solid white;
   caret-color: var(--main-color);
   color: white;
+  padding: 2rem 2rem 2rem 4rem;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 .subscription-section form::placeholder {
@@ -1069,14 +1071,14 @@ header nav .form i {
 }
 
 .subscription-section form input[type="submit"] {
+  background-color: var(--main-color);
+  border: 2px solid white;
+  border-left: none;
+  color: white;
+  height: 100%;
   padding: 1rem 3rem;
   position: absolute;
   right: 0;
-  background-color: var(--main-color);
-  color: white;
-  border: 2px solid white;
-  border-left: none;
-  height: 100%;
   text-transform: uppercase;
 }
 
@@ -1097,3 +1099,85 @@ header nav .form i {
   }
 }
 /*end Subscription section*/
+
+/*Start Contact Section*/
+.contact-section {
+  padding-bottom: var(--section-padding);
+  padding-top: var(--section-padding);
+}
+
+.contact-section .contact-message.grid-1x2 {
+  grid-template-columns: 3fr 1fr;
+}
+
+.contact-section .contact-message form {
+  display: grid;
+  gap: 3rem;
+}
+
+.contact-section .contact-message input,
+.contact-section .contact-message textarea {
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  text-transform: uppercase;
+  border: 1px solid #ccc;
+  caret-color: var(--main-color);
+}
+
+.contact-section .contact-message textarea {
+  height: 20rem;
+}
+
+.contact-section .contact-message input:focus,
+.contact-section .contact-message textarea:focus {
+  outline: none;
+}
+
+.contact-section .contact-message input[type="submit"] {
+  width: fit-content;
+  border: none;
+  justify-self: end;
+  background-color: var(--main-color);
+  color: white;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.contact-section .contact-message input[type="submit"]:hover {
+  background-color: #78aab8;
+}
+
+.contact-section .contact-message .contact-infos .contact-number {
+  margin-bottom: 6rem;
+}
+
+.contact-section .contact-message .contact-infos .contact-number h3,
+.contact-section .contact-message .contact-infos .contact-address h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+}
+
+.contact-section .contact-message .contact-infos .contact-number p,
+.contact-section .contact-message .contact-infos .contact-address p {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .contact-section .contact-message.grid-1x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section .contact-message .contact-infos {
+    margin-bottom: 2rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    order: -1;
+  }
+}
+/*Start Contact Section*/
